@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DriveEasy car rentals - find and book your next ride.">
+  <title>DriveEasy | Car Rental</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="DriveEasy home"><span class="brand-icon">▰</span> Drive<span>Easy</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#cars" class="nav-link">Cars</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <a class="nav-cta" href="#cars">Explore Cars <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-shade"></div>
+      <div class="container hero-content">
+        <p class="eyebrow">RENT A CAR, EXPLORE MORE</p>
+        <h1>Your journey<br>starts <span>here.</span></h1>
+        <p class="hero-copy">Find the perfect car for your next adventure. Affordable rates, flexible booking, and a wide range of vehicles.</p>
+        <a class="button button-primary" href="#cars">Explore Cars <span>→</span></a>
+      </div>
+      <div class="container search-wrap">
+        <form class="search-panel" id="searchForm">
+          <label class="search-field search-name"><span>Search cars</span><input id="searchInput" type="search" placeholder="e.g. Toyota Fortuner"></label>
+          <label class="search-field"><span>Price range</span><select id="priceFilter"><option value="all">Any price</option><option value="0-2000">Under ₹2,000</option><option value="2000-3500">₹2,000 – ₹3,500</option><option value="3500-5000">₹3,500 – ₹5,000</option><option value="5000-999999">₹5,000+</option></select></label>
+          <label class="search-field"><span>Brand</span><select id="brandFilter"><option value="all">All brands</option></select></label>
+          <label class="search-field"><span>Fuel type</span><select id="fuelFilter"><option value="all">Any fuel</option><option>Petrol</option><option>Diesel</option><option>Electric</option><option>CNG</option></select></label>
+          <label class="search-field"><span>Transmission</span><select id="transmissionFilter"><option value="all">Any type</option><option>Automatic</option><option>Manual</option></select></label>
+          <button class="button button-primary search-button" type="submit">Search <span>⌕</span></button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section container" id="cars">
+      <div class="section-heading">
+        <div><p class="eyebrow purple">CHOOSE YOUR RIDE</p><h2>Featured cars</h2><p class="muted">A ride for every journey and every budget.</p></div>
+        <button class="text-button" id="clearFilters">Clear filters <span>↗</span></button>
+      </div>
+      <div class="results-line"><span id="resultsCount">Showing cars</span><label>Sort by <select id="sortSelect"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="name">Name: A to Z</option></select></label></div>
+      <div class="car-grid" id="carGrid" aria-live="polite"></div>
+      <div class="empty-state hidden" id="emptyState"><div class="empty-icon">⌕</div><h3>No cars found</h3><p>Try changing your search or filters.</p></div>
+    </section>
+
+    <section class="why-section" id="about">
+      <div class="container why-inner">
+        <div class="why-copy"><p class="eyebrow">THE DRIVE EASY DIFFERENCE</p><h2>More than a ride.<br><span>Peace of mind.</span></h2><p>From quick city trips to weekend getaways, we make renting a car simple, comfortable, and convenient.</p></div>
+        <div class="benefits">
+          <article class="benefit"><div class="benefit-icon">🚘</div><h3>Wide range of cars</h3><p>Find a vehicle that fits your plans.</p></article>
+          <article class="benefit"><div class="benefit-icon">₹</div><h3>Great value</h3><p>Clear pricing with no surprises.</p></article>
+          <article class="benefit"><div class="benefit-icon">✓</div><h3>Easy booking</h3><p>Book your ride in just a few steps.</p></article>
+          <article class="benefit"><div class="benefit-icon">♧</div><h3>Customer support</h3><p>We're here when you need us.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container about-details">
+      <div><p class="eyebrow purple">ABOUT DRIVE EASY</p><h2>Every road has a story.</h2></div>
+      <p class="muted about-text">DriveEasy is a car rental platform designed to help you explore with confidence. Browse a range of vehicles, compare details, and send a booking request online. Whether you need a car for a day or a longer trip, we're here to help make the journey easier.</p>
+      <div class="service-pills"><span>Daily rentals</span><span>Long-term rentals</span><span>Airport pickup & drop</span><span>Flexible booking</span></div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container contact-layout">
+        <div><p class="eyebrow purple">GET IN TOUCH</p><h2>Let’s get you<br>on the road.</h2><p class="muted">Have a question or need help choosing a car? Send us a message.</p>
+          <div class="contact-info"><p><span>✉</span> hello@driveeasy.com</p><p><span>☎</span> +91 98765 43210</p><p><span>⌖</span> Gurgaon, Haryana, India</p></div>
+          <div class="social-links"><a href="https://www.instagram.com/" target="_blank" rel="noopener">ig</a><a href="https://www.facebook.com/" target="_blank" rel="noopener">f</a><a href="https://www.linkedin.com/" target="_blank" rel="noopener">in</a></div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <h3>Send us a message</h3>
+          <div class="form-row"><label>Full name<input type="text" id="contactName" placeholder="Your name" required></label><label>Email address<input type="email" id="contactEmail" placeholder="you@example.com" required></label></div>
+          <label>Subject<input type="text" id="contactSubject" placeholder="How can we help?" required></label>
+          <label>Message<textarea id="contactMessage" rows="4" placeholder="Write your message..." required></textarea></label>
+          <button class="button button-primary" type="submit">Send message <span>→</span></button>
+          <p class="form-note" id="contactFeedback" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-main">
+      <div><a class="brand footer-brand" href="#home"><span class="brand-icon">▰</span> Drive<span>Easy</span></a><p class="footer-tagline">Drive your dreams.</p></div>
+      <div><h4>Quick links</h4><a href="#home">Home</a><a href="#cars">Cars</a><a href="#about">About us</a><a href="#contact">Contact</a></div>
+      <div><h4>Our services</h4><a href="#cars">Car rental</a><a href="#about">Long-term rental</a><a href="#about">Airport pickup & drop</a><a href="#about">Corporate rentals</a></div>
+      <div><h4>Contact us</h4><a href="tel:+919876543210">+91 98765 43210</a><a href="mailto:hello@driveeasy.com">hello@driveeasy.com</a><span>Gurgaon, Haryana, India</span></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="year"></span> DriveEasy. All rights reserved.</span><span><a href="#contact">Privacy policy</a> · <a href="#contact">Terms of service</a></span></div>
+  </footer>
+
+  <dialog class="details-dialog" id="detailsDialog">
+    <button class="dialog-close" id="closeDetails" aria-label="Close details">×</button>
+    <div id="detailsContent"></div>
+  </dialog>
+
+  <dialog class="booking-dialog" id="bookingDialog">
+    <button class="dialog-close" id="closeBooking" aria-label="Close booking form">×</button>
+    <div class="booking-header"><p class="eyebrow purple">RESERVE YOUR RIDE</p><h2>Book your car</h2><p class="muted" id="bookingCarName"></p></div>
+    <form id="bookingForm" class="booking-form">
+      <input type="hidden" id="bookingCarId">
+      <label>Full name<input type="text" id="bookingName" placeholder="Enter your full name" required></label>
+      <div class="form-row"><label>Pickup date<input type="date" id="pickupDate" required></label><label>Return date<input type="date" id="returnDate" required></label></div>
+      <label>Pickup location<input type="text" id="pickupLocation" placeholder="e.g. Gurgaon" required></label>
+      <label>Contact number<input type="tel" id="bookingPhone" placeholder="+91 98765 43210" pattern="[+0-9 ()-]{8,18}" required></label>
+      <div class="booking-total"><span>Estimated total</span><strong id="estimatedTotal">₹0</strong></div>
+      <button class="button button-primary full-width" type="submit">Submit booking request <span>→</span></button>
+      <p class="form-note" id="bookingFeedback" role="status">Demo only: your request is not sent to a server.</p>
+    </form>
+  </dialog>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
